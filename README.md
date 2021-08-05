@@ -7,6 +7,7 @@
 ![image](https://user-images.githubusercontent.com/65204595/128336653-efe7c4c0-ae91-4b05-89e3-d058f900ef7a.png)
 
 2. Thao tác với API
+ + Thêm, sửa, xóa nhân viên
  + Dùng thư viện Axios
  + API: https://60becf8e6035840017c17a48.mockapi.io/api/employees
  
