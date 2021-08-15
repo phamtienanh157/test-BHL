@@ -16,30 +16,37 @@
         <p>Quản lý nhân sự</p>
     </div>
     <!-- form input thêm sửa -->
+    <div class="container">
     <!-- <div class="add-container">
         <div class="add-overlay"></div>
         <div class="add">
             <div class="add-form">
-                <div class="add-form-input">
+                <form class="add-form-input">
                     <input class="add-input" type="text" placeholder="Name" required>
                     <input class="add-input" type="text" placeholder="Date" required>
                     <input class="add-input" type="text" placeholder="Phone" required>
                     <input class="add-input" type="text" placeholder="Adress" required>
                     <div class="add-btn-input">
-                        <button class="add-btn add-btn-cancel">CANCEL</button>
-                        <button class="add-btn">ADD</button>
+                        <button onclick="hide()" class="add-btn-cancel">CANCEL</button>
+                        <button class="add-btn add-btn-add">ADD</button>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div> -->
+    </div>
+
     <!--  -->
 
     <!-- bảng thông tin -->
     <div class="content">
-        <button class="btn-add">
+        <button onclick="show();onFocus();" class="btn-add">
             Thêm thông tin
         </button>
+        <form class="content-search">
+            <input class="content-input" type="text" placeholder="Tìm kiếm" required>
+            <button class="search-btn">Search</button>
+        </form>
         <table class="content-table">
             <thead>
                 <tr>
@@ -51,68 +58,44 @@
                     <th class="table-title"></th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
+            <tbody class="data-table">
+                <!-- <tr>
                     <td class="table-content">1</td>
                     <td class="table-content">Mr</td>
                     <td class="table-content">1996</td>
                     <td class="table-content">120456</td>
                     <td class="table-content">HN</td>
                     <td class="table-btn">
-                        <button class="btn-edit">
+                        <button onclick="show()" class="btn-edit">
                             <i class="far fa-edit"></i>
                         </button>
-                        <button class="btn-del">
+                        <button onclick="showDel()" class="btn-del">
                             <i class="fas fa-trash-alt"></i>
                         </button>
                     </td>
-                </tr>
-                <tr>
-                    <td class="table-content">2</td>
-                    <td class="table-content">BHL</td>
-                    <td class="table-content">2000</td>
-                    <td class="table-content">120456</td>
-                    <td class="table-content">HN</td>
-                    <td class="table-btn">
-                        <button class="btn-edit">
-                            <i class="far fa-edit"></i>
-                        </button>
-                        <button class="btn-del">
-                            <i class="fas fa-trash-alt"></i>
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="table-content">3</td>
-                    <td class="table-content">Hello</td>
-                    <td class="table-content">2002</td>
-                    <td class="table-content">0987654</td>
-                    <td class="table-content">HN</td>
-                    <td class="table-btn">
-                        <button class="btn-edit">
-                            <i class="far fa-edit"></i>
-                        </button>
-                        <button class="btn-del">
-                            <i class="fas fa-trash-alt"></i>
-                        </button>
-                    </td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
-    </div> -->
+    </div>
     <!-- hết bảng thông tin -->
     <!-- form xóa -->
-    <div class="del-container">
-        <div class="del-overlay"></div>
-        <div class="del-content">
-            <div class="del-form">
-                <h3 class="del-danger">Are you sure ?</h3>
-                <div class="del-btn">
-                    <button class="del-btn-cancel">No</button>
-                    <button class="del-btn-del">Yes</button>
+    <div class="delete-container">
+        <!-- <div class="del-container">
+            <div class="del-overlay"></div>
+            <div class="del-content">
+                <div class="del-form">
+                    <h3 class="del-danger">Are you sure ?</h3>
+                    <div class="del-btn">
+                        <button onclick="hideDel()" class="del-btn-cancel">No</button>
+                        <button onclick="hideDel();deleteRow();" class="del-btn-del">Yes</button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/main.js"></script>
 </body>
 </html>
