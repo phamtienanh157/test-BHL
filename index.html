@@ -44,8 +44,10 @@
             Thêm thông tin
         </button>
         <form class="content-search">
-            <input class="content-input" type="text" placeholder="Tìm kiếm" required>
-            <button class="search-btn">Search</button>
+            <div class="content-input">
+                <input id="input" class="input-content" type="text" placeholder="Tìm kiếm" required>
+            </div>
+            <button type="submit" onclick="showData();" class="search-btn focus"><i class="fas fa-search"></i></button>
         </form>
         <table class="content-table">
             <thead>
@@ -76,6 +78,7 @@
                 </tr> -->
             </tbody>
         </table>
+        
     </div>
     <!-- hết bảng thông tin -->
     <!-- form xóa -->
@@ -93,6 +96,13 @@
             </div>
         </div> -->
     </div>
+    <!-- dialog-success -->
+    <div class="success-dialog">
+        <h3 class="success">Successful!</h3>
+        <i class="far fa-check-circle"></i>
+    </div>
+    
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
